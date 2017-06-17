@@ -9,7 +9,7 @@ var bio = {
 		"location": "Allen, TX"
 	},
 	"biopic": "images/bio.jpg",
-	"welcomeMessage": "Welcome to my site. I am a self-taught Web Developer. I am currently studying at Udacity for Front-End Web Development",
+	"welcomeMsg": "Welcome to my site. I am a self-taught Web Developer. I am currently studying at Udacity for Front-End Web Development",
 	"skills": ["HTML", "CSS", "Javascript", "Python", "jQuery", "Bootstrap", "Sublime Text", "Google App Engine"]
 };
 
@@ -131,6 +131,8 @@ bio.display = function() {
 	$("#footerContacts").append(HTMLgithub.replace("%data%", bio.contact.github));
 
 	$("#footerContacts").append(HTMLlocation.replace("%data%", bio.contact.location));
+	
+	$(".welcome-message").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
 }
 
 work.display = function() {
